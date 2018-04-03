@@ -11,7 +11,12 @@ public class Programa {
 		
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("-Bem vindo a calculadora, escolha uma operação-");
+		System.out.println("-Bem vindo a calculadora SOAP, escolha uma operação-");
+		Scanner input1 = new Scanner(System.in);
+	    System.out.println("Digite o primeiro número: ");
+		n1 = input1.nextFloat();
+		System.out.println("Digite o segundo número: ");
+		n2 = input1.nextFloat();
 	    System.out.println("1. Soma");  
 	    System.out.println("2. Subtracao");  
 	    System.out.println("3. Multiplicacao");  
@@ -19,31 +24,35 @@ public class Programa {
 	    System.out.println("0. Sair");  
 	    System.out.println("Operação: ");
 	    opcao = input.nextInt();
-	    Scanner input1 = new Scanner(System.in);
+	    
 	    while(opcao != 0) {
-			System.out.println("Digite o primeiro número: ");
-			n1 = input1.nextFloat();
-			System.out.println("Digite o segundo número: ");
-			n2 = input1.nextFloat();
-			switch(opcao) {
 			
-			case 1:
+			
+			
+			if(opcao == 1) {
+				
 				float resultado = calc.somar(n1, n2);
 				System.out.println(resultado);
 				break;
-			case 2:
-				resultado = calc.substrair(n1, n2);
-				System.out.println(resultado);
-				break;
-			case 3:
-				resultado = calc.multiplicar(n1, n2);
-				System.out.println(resultado);
-				break;
-			case 4:
-				resultado = calc.dividir(n1, n2);
+			}
+			if(opcao == 2) {
+				float resultado = calc.substrair(n1, n2);
 				System.out.println(resultado);
 				break;
 			}
+			if(opcao == 3) {
+				float resultado = calc.multiplicar(n1, n2);
+				System.out.println(resultado);
+				break;
+			}
+			if(opcao == 4) {
+				float resultado = calc.dividir(n1, n2);
+				System.out.println(resultado);
+				break;
+			}
+			
+			
+				
 			
 				
 			
